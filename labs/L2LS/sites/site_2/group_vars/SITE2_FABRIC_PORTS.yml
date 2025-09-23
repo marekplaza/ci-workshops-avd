@@ -40,6 +40,6 @@ servers:
       - endpoint_ports: [ eth1, eth2 ]                  # Server port to connect (optional)
         switch_ports: [ Ethernet4, Ethernet4 ]          # Switch port to connect server (required)
         switches: [ s2-leaf3, s2-leaf4 ]                # Switch to connect server (required)
-        profile: PP-VLAN40                              # Port profile to apply (required)
+        profile: PP-VLAN30                              # Port profile to apply (required)
         port_channel:
           mode: active
