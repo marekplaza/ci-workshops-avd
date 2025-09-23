@@ -1,7 +1,7 @@
 ---
 - name: Validate Network State
   hosts: "{{ target_hosts }}"
-  connection: httpapi
+  #connection: httpapi
   gather_facts: false
 
   tasks:
