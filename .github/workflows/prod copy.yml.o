@@ -48,29 +48,3 @@ jobs:
         run: make build-site-2 cvp-legacy-site-2
         working-directory: labs/L2LS/
         if: steps.filter-site2.outputs.workflows == 'true'
-
-
-  test-prod:
-    env:
-      LABPASSPHRASE: ${{ secrets.LABPASSPHRASE }}
-    timeout-minutes: 15
-    runs-on: ubuntu-latest
-    steps:
-      - name: Hi
-        run: echo "ANTA is here"
-
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Python
-        uses: actions/setup-python@v5
-      - name: Install Python requirements
-        run: pip3 install -r requirements.txt
-      - name: Run pre-commit on files
-        uses: pre-commit/action@v3.0.0
-
-      - name: Install collections
-        run: ansible-galaxy collection install -r requirements.yml
-
-      - name: ANTA TEST (Ping and Validate) for site-1 1 and site-2
-        run: make ping-site-1 ping-site-2 validate-site-1 validate-site-2
-        working-directory: labs/L2LS/
