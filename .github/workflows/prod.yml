@@ -49,7 +49,6 @@ jobs:
         working-directory: labs/L2LS/
         if: steps.filter-site2.outputs.workflows == 'true'
 
-jobs:
   ANTA-prod-ping :
     env:
       LABPASSPHRASE: ${{ secrets.LABPASSPHRASE }}
