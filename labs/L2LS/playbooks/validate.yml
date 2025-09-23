@@ -5,6 +5,10 @@
   gather_facts: false
 
   tasks:
+    - name: Import Global Vars
+      ansible.builtin.include_vars: "{{ item }}"
+      with_items:
+        - "../global_vars/global_dc_vars.yml"
         
     - name: validate states on EOS devices
       ansible.builtin.import_role:
