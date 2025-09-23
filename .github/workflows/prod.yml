@@ -45,6 +45,6 @@ jobs:
         working-directory: labs/L2LS/
         if: steps.filter-site1.outputs.workflows == 'true'
       - name: Build and deploy site2
-        run: make build-site-2 cvp-legacy-site-1
+        run: make build-site-2 cvp-legacy-site-2
         working-directory: labs/L2LS/
         if: steps.filter-site2.outputs.workflows == 'true'
