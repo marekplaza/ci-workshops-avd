@@ -92,7 +92,7 @@ local_users:
 - name: arista
   privilege: 15
   role: network-admin
-  sha512_password: $6$arista$uzRNIzDaPWpgJ0DlHoTHwRoF0f5naUJYCP1.StnRLgl6N8xi9JsyFYa//bmvS7TG7uF/.1LexnL5UYxejDUor1
+  sha512_password: $6$arista$RArU/OEQzi81GpjRc8tQz6nDYbOoQGCq02vnj4AeNZrW6wSGSN6dyDw1/DzCDi5HvsTWHXFmASMPSy7iJED.T/
 loopback_interfaces:
 - name: Loopback0
   description: ROUTER_ID
@@ -207,15 +207,6 @@ vlan_interfaces:
   tenant: MY_FABRIC
   tags:
   - App
-- name: Vlan25
-  description: Twenty-five
-  shutdown: false
-  ip_address: 10.25.25.2/24
-  ip_virtual_router_addresses:
-  - 10.25.25.1
-  tenant: MY_FABRIC
-  tags:
-  - Wifi
 vlan_internal_order:
   allocation: ascending
   range:
@@ -237,9 +228,6 @@ vlans:
   tenant: MY_FABRIC
 - id: 20
   name: Twenty
-  tenant: MY_FABRIC
-- id: 25
-  name: Twenty-five
   tenant: MY_FABRIC
 vrfs:
 - name: default
