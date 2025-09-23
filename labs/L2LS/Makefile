@@ -28,7 +28,7 @@ cvp-site-1: ## Deploy Configs via CloudVision Static Configuration Studio
 
 .PHONY: validate-site-1
 validate-site-1: ## Validate network state
-	ansible-playbook playbooks/validate.yml -i sites/site_1/inventory.yml -e "target_hosts=SITE1_FABRIC"
+	ansible-playbook playbooks/validate.yml -i sites/site_1/inventory.yml -e "target_hosts=SITE1_FABRIC" -vvv
 
 ########################################################
 # Site 2
@@ -56,7 +56,7 @@ cvp-site-2: ## Deploy Configs via CloudVision Static Configuration Studio
 
 .PHONY: validate-site-2
 validate-site-2: ## Validate network state
-	ansible-playbook playbooks/validate.yml -i sites/site_2/inventory.yml -e "target_hosts=SITE2_FABRIC"
+	ansible-playbook playbooks/validate.yml -i sites/site_2/inventory.yml -e "target_hosts=SITE2_FABRIC" -vvv
 
 ########################################################
 # WAN & Hosts - Lab Prep
