@@ -37,3 +37,5 @@ tenants:
                 ip_address: 10.44.44.2/24
               - node: s1-spine2
                 ip_address: 10.44.44.3/24
+              - node: s1-leaf2
+                ip_address: 10.44.44.22/24
