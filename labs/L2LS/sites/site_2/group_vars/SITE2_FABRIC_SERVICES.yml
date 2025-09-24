@@ -6,7 +6,7 @@ tenants:
         svis:
           - id: 30
             name: 'Thirty'
-            tags: [ "DB1" ]
+            tags: [ "DB" ]
             enabled: true
             ip_virtual_router_addresses:
               - 10.30.30.1
@@ -17,7 +17,7 @@ tenants:
                 ip_address: 10.30.30.3/24
           - id: 40
             name: 'Forty'
-            tags: [ "DMZ1" ]
+            tags: [ "DMZ" ]
             enabled: true
             ip_virtual_router_addresses:
               - 10.40.40.1

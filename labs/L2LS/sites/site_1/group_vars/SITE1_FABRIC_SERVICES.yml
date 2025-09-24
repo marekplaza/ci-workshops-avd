@@ -16,7 +16,7 @@ tenants:
               - node: s1-spine2
                 ip_address: 10.10.10.3/24
           - id: 20
-            name: 'Twenty20'
+            name: 'Twenty'
             tags: [ "App" ]
             enabled: true
             ip_virtual_router_addresses:
@@ -26,14 +26,3 @@ tenants:
                 ip_address: 10.20.20.2/24
               - node: s1-spine2
                 ip_address: 10.20.20.3/24
-          - id: 44
-            name: 'Twenty'
-            tags: [ "App" ]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.44.44.1
-            nodes:
-              - node: s1-spine1
-                ip_address: 10.44.44.2/24
-              - node: s1-spine2
-                ip_address: 10.44.44.3/24
