@@ -16,7 +16,7 @@ tenants:
               - node: s1-spine2
                 ip_address: 10.10.10.3/24
           - id: 20
-            name: 'Twenty20'
+            name: 'Twenty20dadziescia'
             tags: [ "App" ]
             enabled: true
             ip_virtual_router_addresses:
