@@ -13,6 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Hi
+<<<<<<< HEAD
         run: echo "Hello World!"
 
       - name: Checkout
@@ -27,20 +28,37 @@ jobs:
       - name: Run pre-commit on files
         uses: pre-commit/action@v3.0.0
 
+=======
+        run: echo "Hello World! DEV"
+
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+      - name: Install Python requirements
+        run: pip3 install -r requirements.txt
+      - name: Run pre-commit on files
+        uses: pre-commit/action@v3.0.0
+>>>>>>> 8ceff618494986d7a22bbf47fb53e29bab54afd8
       - name: Check paths for sites/site_1
         uses: dorny/paths-filter@v3
         id: filter-site1
         with:
           filters: |
             workflows:
+<<<<<<< HEAD
                - 'labs/L2LS/sites/site_1/**'
 
+=======
+              - 'labs/L2LS/sites/site_1/**'
+>>>>>>> 8ceff618494986d7a22bbf47fb53e29bab54afd8
       - name: Check paths for sites/site_2
         uses: dorny/paths-filter@v3
         id: filter-site2
         with:
           filters: |
             workflows:
+<<<<<<< HEAD
                - 'labs/L2LS/sites/site_2/**'
 
       - name: Install collections
@@ -56,3 +74,17 @@ jobs:
         run: make build-site-2
         working-directory: labs/L2LS/
         if: steps.filter-site2.outputs.workflows == 'true'
+=======
+              - 'labs/L2LS/sites/site_2/**'
+      - name: Install collections
+        run: ansible-galaxy collection install -r requirements.yml
+        if: steps.filter-site1.outputs.workflows == 'true' || steps.filter-site2.outputs.workflows == 'true'
+      - name: Build and deploy site1
+        run: make build-site-1
+        working-directory: labs/L2LS/
+        if: steps.filter-site1.outputs.workflows == 'true'
+      - name: Build and deploy site2
+        run: make build-site-2
+        working-directory: labs/L2LS/
+        if: steps.filter-site2.outputs.workflows == 'true'
+>>>>>>> 8ceff618494986d7a22bbf47fb53e29bab54afd8

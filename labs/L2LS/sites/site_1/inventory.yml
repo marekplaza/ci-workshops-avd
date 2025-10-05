@@ -3,8 +3,13 @@ SITE1:
   children:
     CVP:
       hosts:
+<<<<<<< HEAD
         cvp:
           ansible_host: <atd-topo12345.topo.testdrive.arista.com>
+=======
+          cvp:
+            ansible_host: apius-ing-1-d826430d-eos.topo.testdrive.arista.com
+>>>>>>> 8ceff618494986d7a22bbf47fb53e29bab54afd8
     SITE1_FABRIC:
       children:
         SITE1_SPINES:

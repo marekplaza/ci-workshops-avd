@@ -1,3 +1,4 @@
-anta[cli]==1.2.0
+anta[cli]==1.5.0
+anta
 passlib
 pyavd[ansible]==5.2.2
