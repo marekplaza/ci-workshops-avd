@@ -68,7 +68,7 @@
     "description": "Verifies the status of power supply fans and all fan trays.",
     "result": "skipped",
     "messages": [
-      "VerifyEnvironmentCooling test is not supported on cEOSLab."
+      "VerifyEnvironmentCooling test is not supported on cEOSLab"
     ],
     "custom_field": "Accepted States: 'ok'"
   },
@@ -78,10 +78,10 @@
     "categories": [
       "hardware"
     ],
-    "description": "Verifies the power supplies status.",
+    "description": "Verifies the power supplies state and input voltage.",
     "result": "skipped",
     "messages": [
-      "VerifyEnvironmentPower test is not supported on cEOSLab."
+      "VerifyEnvironmentPower test is not supported on cEOSLab"
     ],
     "custom_field": "Accepted States: 'ok'"
   },
@@ -94,7 +94,7 @@
     "description": "Verifies if the device temperature is within acceptable limits.",
     "result": "skipped",
     "messages": [
-      "VerifyTemperature test is not supported on cEOSLab."
+      "VerifyTemperature test is not supported on cEOSLab"
     ]
   },
   {
@@ -106,7 +106,7 @@
     "description": "Verifies if all the transceivers come from approved manufacturers.",
     "result": "skipped",
     "messages": [
-      "VerifyTransceiversManufacturers test is not supported on cEOSLab."
+      "VerifyTransceiversManufacturers test is not supported on cEOSLab"
     ],
     "custom_field": "Accepted Manufacturers: 'Arista Networks', 'Arastra, Inc.', 'Not Present'"
   },
