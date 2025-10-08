@@ -196,7 +196,10 @@
       "system"
     ],
     "description": "Verifies if NTP is synchronised.",
-    "result": "success"
+    "result": "failure",
+    "messages": [
+      "NTP status mismatch - Expected: synchronised Actual: NTP starting..."
+    ]
   },
   {
     "name": "s2-leaf3",

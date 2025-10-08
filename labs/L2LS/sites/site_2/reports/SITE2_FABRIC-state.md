@@ -13,18 +13,18 @@
 
 | Total Tests | Total Tests Passed | Total Tests Failed | Total Tests Skipped |
 | ----------- | ------------------ | ------------------ | ------------------- |
-| 138 | 114 | 0 | 24 |
+| 138 | 109 | 5 | 24 |
 
 ### Summary Totals Device Under Test
 
 | Device Under Test | Total Tests | Tests Passed | Tests Failed | Tests Skipped | Categories Failed | Categories Skipped |
 | ------------------| ----------- | ------------ | ------------ | ------------- | ----------------- | ------------------ |
 | s2-leaf1 | 20 | 16 | 0 | 4 | - | Hardware |
-| s2-leaf2 | 20 | 16 | 0 | 4 | - | Hardware |
-| s2-leaf3 | 20 | 16 | 0 | 4 | - | Hardware |
-| s2-leaf4 | 20 | 16 | 0 | 4 | - | Hardware |
-| s2-spine1 | 29 | 25 | 0 | 4 | - | Hardware |
-| s2-spine2 | 29 | 25 | 0 | 4 | - | Hardware |
+| s2-leaf2 | 20 | 15 | 1 | 4 | System | Hardware |
+| s2-leaf3 | 20 | 15 | 1 | 4 | System | Hardware |
+| s2-leaf4 | 20 | 15 | 1 | 4 | System | Hardware |
+| s2-spine1 | 29 | 24 | 1 | 4 | System | Hardware |
+| s2-spine2 | 29 | 24 | 1 | 4 | System | Hardware |
 
 ### Summary Totals Per Category
 
@@ -34,12 +34,17 @@
 | Hardware | 24 | 0 | 0 | 24 |
 | Interfaces | 68 | 68 | 0 | 0 |
 | MLAG | 6 | 6 | 0 | 0 |
-| System | 12 | 12 | 0 | 0 |
+| System | 12 | 7 | 5 | 0 |
 
 ## Failed Test Results Summary
 
 | ID | Device Under Test | Categories | Test | Description | Inputs | Result | Messages |
 | -- | ----------------- | ---------- | ---- | ----------- | ------ | -------| -------- |
+| 39 | s2-leaf2 | System | VerifyNTP | Verifies if NTP is synchronised. | - | FAIL | NTP status mismatch - Expected: synchronised Actual: NTP starting... |
+| 59 | s2-leaf3 | System | VerifyNTP | Verifies if NTP is synchronised. | - | FAIL | NTP status mismatch - Expected: synchronised Actual: NTP starting... |
+| 79 | s2-leaf4 | System | VerifyNTP | Verifies if NTP is synchronised. | - | FAIL | NTP status mismatch - Expected: synchronised Actual: NTP starting... |
+| 108 | s2-spine1 | System | VerifyNTP | Verifies if NTP is synchronised. | - | FAIL | NTP status mismatch - Expected: synchronised Actual: NTP starting... |
+| 137 | s2-spine2 | System | VerifyNTP | Verifies if NTP is synchronised. | - | FAIL | NTP status mismatch - Expected: synchronised Actual: NTP starting... |
 
 ## All Test Results
 
@@ -83,7 +88,7 @@
 | 36 | s2-leaf2 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Port-Channel4 - SERVER_s2-host1 = 'up' | PASS | - |
 | 37 | s2-leaf2 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Vlan4094 - MLAG = 'up' | PASS | - |
 | 38 | s2-leaf2 | MLAG | VerifyMlagStatus | Verifies the health status of the MLAG configuration. | - | PASS | - |
-| 39 | s2-leaf2 | System | VerifyNTP | Verifies if NTP is synchronised. | - | PASS | - |
+| 39 | s2-leaf2 | System | VerifyNTP | Verifies if NTP is synchronised. | - | FAIL | NTP status mismatch - Expected: synchronised Actual: NTP starting... |
 | 40 | s2-leaf2 | System | VerifyReloadCause | Verifies the last reload cause of the device. | - | PASS | - |
 | 41 | s2-leaf3 | Connectivity | VerifyLLDPNeighbors | Verifies the connection status of the specified LLDP (Link Layer Discovery Protocol) neighbors. | Local: Ethernet1 - Remote: s2-leaf4 Ethernet1 | PASS | - |
 | 42 | s2-leaf3 | Connectivity | VerifyLLDPNeighbors | Verifies the connection status of the specified LLDP (Link Layer Discovery Protocol) neighbors. | Local: Ethernet2 - Remote: s2-spine1 Ethernet4 | PASS | - |
@@ -103,7 +108,7 @@
 | 56 | s2-leaf3 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Port-Channel4 - SERVER_s2-host2 = 'up' | PASS | - |
 | 57 | s2-leaf3 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Vlan4094 - MLAG = 'up' | PASS | - |
 | 58 | s2-leaf3 | MLAG | VerifyMlagStatus | Verifies the health status of the MLAG configuration. | - | PASS | - |
-| 59 | s2-leaf3 | System | VerifyNTP | Verifies if NTP is synchronised. | - | PASS | - |
+| 59 | s2-leaf3 | System | VerifyNTP | Verifies if NTP is synchronised. | - | FAIL | NTP status mismatch - Expected: synchronised Actual: NTP starting... |
 | 60 | s2-leaf3 | System | VerifyReloadCause | Verifies the last reload cause of the device. | - | PASS | - |
 | 61 | s2-leaf4 | Connectivity | VerifyLLDPNeighbors | Verifies the connection status of the specified LLDP (Link Layer Discovery Protocol) neighbors. | Local: Ethernet1 - Remote: s2-leaf3 Ethernet1 | PASS | - |
 | 62 | s2-leaf4 | Connectivity | VerifyLLDPNeighbors | Verifies the connection status of the specified LLDP (Link Layer Discovery Protocol) neighbors. | Local: Ethernet2 - Remote: s2-spine1 Ethernet5 | PASS | - |
@@ -123,7 +128,7 @@
 | 76 | s2-leaf4 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Port-Channel4 - SERVER_s2-host2 = 'up' | PASS | - |
 | 77 | s2-leaf4 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Vlan4094 - MLAG = 'up' | PASS | - |
 | 78 | s2-leaf4 | MLAG | VerifyMlagStatus | Verifies the health status of the MLAG configuration. | - | PASS | - |
-| 79 | s2-leaf4 | System | VerifyNTP | Verifies if NTP is synchronised. | - | PASS | - |
+| 79 | s2-leaf4 | System | VerifyNTP | Verifies if NTP is synchronised. | - | FAIL | NTP status mismatch - Expected: synchronised Actual: NTP starting... |
 | 80 | s2-leaf4 | System | VerifyReloadCause | Verifies the last reload cause of the device. | - | PASS | - |
 | 81 | s2-spine1 | Connectivity | VerifyLLDPNeighbors | Verifies the connection status of the specified LLDP (Link Layer Discovery Protocol) neighbors. | Local: Ethernet1 - Remote: s2-spine2 Ethernet1 | PASS | - |
 | 82 | s2-spine1 | Connectivity | VerifyLLDPNeighbors | Verifies the connection status of the specified LLDP (Link Layer Discovery Protocol) neighbors. | Local: Ethernet2 - Remote: s2-leaf1 Ethernet2 | PASS | - |
@@ -152,7 +157,7 @@
 | 105 | s2-spine1 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Vlan4093 - MLAG_L3 = 'up' | PASS | - |
 | 106 | s2-spine1 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Vlan4094 - MLAG = 'up' | PASS | - |
 | 107 | s2-spine1 | MLAG | VerifyMlagStatus | Verifies the health status of the MLAG configuration. | - | PASS | - |
-| 108 | s2-spine1 | System | VerifyNTP | Verifies if NTP is synchronised. | - | PASS | - |
+| 108 | s2-spine1 | System | VerifyNTP | Verifies if NTP is synchronised. | - | FAIL | NTP status mismatch - Expected: synchronised Actual: NTP starting... |
 | 109 | s2-spine1 | System | VerifyReloadCause | Verifies the last reload cause of the device. | - | PASS | - |
 | 110 | s2-spine2 | Connectivity | VerifyLLDPNeighbors | Verifies the connection status of the specified LLDP (Link Layer Discovery Protocol) neighbors. | Local: Ethernet1 - Remote: s2-spine1 Ethernet1 | PASS | - |
 | 111 | s2-spine2 | Connectivity | VerifyLLDPNeighbors | Verifies the connection status of the specified LLDP (Link Layer Discovery Protocol) neighbors. | Local: Ethernet2 - Remote: s2-leaf1 Ethernet3 | PASS | - |
@@ -181,5 +186,5 @@
 | 134 | s2-spine2 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Vlan4093 - MLAG_L3 = 'up' | PASS | - |
 | 135 | s2-spine2 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Vlan4094 - MLAG = 'up' | PASS | - |
 | 136 | s2-spine2 | MLAG | VerifyMlagStatus | Verifies the health status of the MLAG configuration. | - | PASS | - |
-| 137 | s2-spine2 | System | VerifyNTP | Verifies if NTP is synchronised. | - | PASS | - |
+| 137 | s2-spine2 | System | VerifyNTP | Verifies if NTP is synchronised. | - | FAIL | NTP status mismatch - Expected: synchronised Actual: NTP starting... |
 | 138 | s2-spine2 | System | VerifyReloadCause | Verifies the last reload cause of the device. | - | PASS | - |
