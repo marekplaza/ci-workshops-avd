@@ -217,7 +217,10 @@
       "interfaces"
     ],
     "description": "Verifies the operational states of specified interfaces to ensure they match expected configurations.",
-    "result": "success",
+    "result": "failure",
+    "messages": [
+      "Port-Channel2 - Status mismatch - Expected: up/up, Actual: down/lowerLayerDown"
+    ],
     "custom_field": "Interface Port-Channel2 - L2_RACK1_Port-Channel2 = 'up'"
   },
   {
@@ -227,7 +230,10 @@
       "interfaces"
     ],
     "description": "Verifies the operational states of specified interfaces to ensure they match expected configurations.",
-    "result": "success",
+    "result": "failure",
+    "messages": [
+      "Port-Channel4 - Status mismatch - Expected: up/up, Actual: down/lowerLayerDown"
+    ],
     "custom_field": "Interface Port-Channel4 - L2_RACK2_Port-Channel2 = 'up'"
   },
   {

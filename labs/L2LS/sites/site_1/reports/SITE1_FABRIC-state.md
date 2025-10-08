@@ -13,18 +13,18 @@
 
 | Total Tests | Total Tests Passed | Total Tests Failed | Total Tests Skipped |
 | ----------- | ------------------ | ------------------ | ------------------- |
-| 138 | 114 | 0 | 24 |
+| 138 | 102 | 12 | 24 |
 
 ### Summary Totals Device Under Test
 
 | Device Under Test | Total Tests | Tests Passed | Tests Failed | Tests Skipped | Categories Failed | Categories Skipped |
 | ------------------| ----------- | ------------ | ------------ | ------------- | ----------------- | ------------------ |
-| s1-leaf1 | 20 | 16 | 0 | 4 | - | Hardware |
-| s1-leaf2 | 20 | 16 | 0 | 4 | - | Hardware |
-| s1-leaf3 | 20 | 16 | 0 | 4 | - | Hardware |
-| s1-leaf4 | 20 | 16 | 0 | 4 | - | Hardware |
-| s1-spine1 | 29 | 25 | 0 | 4 | - | Hardware |
-| s1-spine2 | 29 | 25 | 0 | 4 | - | Hardware |
+| s1-leaf1 | 20 | 14 | 2 | 4 | Interfaces | Hardware |
+| s1-leaf2 | 20 | 14 | 2 | 4 | Interfaces | Hardware |
+| s1-leaf3 | 20 | 14 | 2 | 4 | Interfaces | Hardware |
+| s1-leaf4 | 20 | 14 | 2 | 4 | Interfaces | Hardware |
+| s1-spine1 | 29 | 23 | 2 | 4 | Interfaces | Hardware |
+| s1-spine2 | 29 | 23 | 2 | 4 | Interfaces | Hardware |
 
 ### Summary Totals Per Category
 
@@ -32,7 +32,7 @@
 | ------------- | ----------- | ------------ | ------------ | ------------- |
 | Connectivity | 28 | 28 | 0 | 0 |
 | Hardware | 24 | 0 | 0 | 24 |
-| Interfaces | 68 | 68 | 0 | 0 |
+| Interfaces | 68 | 56 | 12 | 0 |
 | MLAG | 6 | 6 | 0 | 0 |
 | System | 12 | 12 | 0 | 0 |
 
@@ -40,6 +40,18 @@
 
 | ID | Device Under Test | Categories | Test | Description | Inputs | Result | Messages |
 | -- | ----------------- | ---------- | ---- | ----------- | ------ | -------| -------- |
+| 15 | s1-leaf1 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Port-Channel2 - L2_SPINES_Port-Channel2 = 'up' | FAIL | Port-Channel2 - Not configured |
+| 16 | s1-leaf1 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Port-Channel4 - SERVER_s1-host1 = 'up' | FAIL | Port-Channel4 - Not configured |
+| 35 | s1-leaf2 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Port-Channel2 - L2_SPINES_Port-Channel2 = 'up' | FAIL | Port-Channel2 - Not configured |
+| 36 | s1-leaf2 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Port-Channel4 - SERVER_s1-host1 = 'up' | FAIL | Port-Channel4 - Not configured |
+| 55 | s1-leaf3 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Port-Channel2 - L2_SPINES_Port-Channel4 = 'up' | FAIL | Port-Channel2 - Not configured |
+| 56 | s1-leaf3 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Port-Channel4 - SERVER_s1-host2 = 'up' | FAIL | Port-Channel4 - Not configured |
+| 75 | s1-leaf4 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Port-Channel2 - L2_SPINES_Port-Channel4 = 'up' | FAIL | Port-Channel2 - Not configured |
+| 76 | s1-leaf4 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Port-Channel4 - SERVER_s1-host2 = 'up' | FAIL | Port-Channel4 - Not configured |
+| 101 | s1-spine1 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Port-Channel2 - L2_RACK1_Port-Channel2 = 'up' | FAIL | Port-Channel2 - Status mismatch - Expected: up/up, Actual: down/lowerLayerDown |
+| 102 | s1-spine1 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Port-Channel4 - L2_RACK2_Port-Channel2 = 'up' | FAIL | Port-Channel4 - Status mismatch - Expected: up/up, Actual: down/lowerLayerDown |
+| 130 | s1-spine2 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Port-Channel2 - L2_RACK1_Port-Channel2 = 'up' | FAIL | Port-Channel2 - Status mismatch - Expected: up/up, Actual: down/lowerLayerDown |
+| 131 | s1-spine2 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Port-Channel4 - L2_RACK2_Port-Channel2 = 'up' | FAIL | Port-Channel4 - Status mismatch - Expected: up/up, Actual: down/lowerLayerDown |
 
 ## All Test Results
 
@@ -59,8 +71,8 @@
 | 12 | s1-leaf1 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Ethernet4 - SERVER_s1-host1_eth1 = 'up' | PASS | - |
 | 13 | s1-leaf1 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Ethernet6 - MLAG_s1-leaf2_Ethernet6 = 'up' | PASS | - |
 | 14 | s1-leaf1 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Port-Channel1 - MLAG_s1-leaf2_Port-Channel1 = 'up' | PASS | - |
-| 15 | s1-leaf1 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Port-Channel2 - L2_SPINES_Port-Channel2 = 'up' | PASS | - |
-| 16 | s1-leaf1 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Port-Channel4 - SERVER_s1-host1 = 'up' | PASS | - |
+| 15 | s1-leaf1 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Port-Channel2 - L2_SPINES_Port-Channel2 = 'up' | FAIL | Port-Channel2 - Not configured |
+| 16 | s1-leaf1 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Port-Channel4 - SERVER_s1-host1 = 'up' | FAIL | Port-Channel4 - Not configured |
 | 17 | s1-leaf1 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Vlan4094 - MLAG = 'up' | PASS | - |
 | 18 | s1-leaf1 | MLAG | VerifyMlagStatus | Verifies the health status of the MLAG configuration. | - | PASS | - |
 | 19 | s1-leaf1 | System | VerifyNTP | Verifies if NTP is synchronised. | - | PASS | - |
@@ -79,8 +91,8 @@
 | 32 | s1-leaf2 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Ethernet4 - SERVER_s1-host1_eth2 = 'up' | PASS | - |
 | 33 | s1-leaf2 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Ethernet6 - MLAG_s1-leaf1_Ethernet6 = 'up' | PASS | - |
 | 34 | s1-leaf2 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Port-Channel1 - MLAG_s1-leaf1_Port-Channel1 = 'up' | PASS | - |
-| 35 | s1-leaf2 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Port-Channel2 - L2_SPINES_Port-Channel2 = 'up' | PASS | - |
-| 36 | s1-leaf2 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Port-Channel4 - SERVER_s1-host1 = 'up' | PASS | - |
+| 35 | s1-leaf2 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Port-Channel2 - L2_SPINES_Port-Channel2 = 'up' | FAIL | Port-Channel2 - Not configured |
+| 36 | s1-leaf2 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Port-Channel4 - SERVER_s1-host1 = 'up' | FAIL | Port-Channel4 - Not configured |
 | 37 | s1-leaf2 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Vlan4094 - MLAG = 'up' | PASS | - |
 | 38 | s1-leaf2 | MLAG | VerifyMlagStatus | Verifies the health status of the MLAG configuration. | - | PASS | - |
 | 39 | s1-leaf2 | System | VerifyNTP | Verifies if NTP is synchronised. | - | PASS | - |
@@ -99,8 +111,8 @@
 | 52 | s1-leaf3 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Ethernet4 - SERVER_s1-host2_eth1 = 'up' | PASS | - |
 | 53 | s1-leaf3 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Ethernet6 - MLAG_s1-leaf4_Ethernet6 = 'up' | PASS | - |
 | 54 | s1-leaf3 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Port-Channel1 - MLAG_s1-leaf4_Port-Channel1 = 'up' | PASS | - |
-| 55 | s1-leaf3 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Port-Channel2 - L2_SPINES_Port-Channel4 = 'up' | PASS | - |
-| 56 | s1-leaf3 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Port-Channel4 - SERVER_s1-host2 = 'up' | PASS | - |
+| 55 | s1-leaf3 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Port-Channel2 - L2_SPINES_Port-Channel4 = 'up' | FAIL | Port-Channel2 - Not configured |
+| 56 | s1-leaf3 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Port-Channel4 - SERVER_s1-host2 = 'up' | FAIL | Port-Channel4 - Not configured |
 | 57 | s1-leaf3 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Vlan4094 - MLAG = 'up' | PASS | - |
 | 58 | s1-leaf3 | MLAG | VerifyMlagStatus | Verifies the health status of the MLAG configuration. | - | PASS | - |
 | 59 | s1-leaf3 | System | VerifyNTP | Verifies if NTP is synchronised. | - | PASS | - |
@@ -119,8 +131,8 @@
 | 72 | s1-leaf4 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Ethernet4 - SERVER_s1-host2_eth2 = 'up' | PASS | - |
 | 73 | s1-leaf4 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Ethernet6 - MLAG_s1-leaf3_Ethernet6 = 'up' | PASS | - |
 | 74 | s1-leaf4 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Port-Channel1 - MLAG_s1-leaf3_Port-Channel1 = 'up' | PASS | - |
-| 75 | s1-leaf4 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Port-Channel2 - L2_SPINES_Port-Channel4 = 'up' | PASS | - |
-| 76 | s1-leaf4 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Port-Channel4 - SERVER_s1-host2 = 'up' | PASS | - |
+| 75 | s1-leaf4 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Port-Channel2 - L2_SPINES_Port-Channel4 = 'up' | FAIL | Port-Channel2 - Not configured |
+| 76 | s1-leaf4 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Port-Channel4 - SERVER_s1-host2 = 'up' | FAIL | Port-Channel4 - Not configured |
 | 77 | s1-leaf4 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Vlan4094 - MLAG = 'up' | PASS | - |
 | 78 | s1-leaf4 | MLAG | VerifyMlagStatus | Verifies the health status of the MLAG configuration. | - | PASS | - |
 | 79 | s1-leaf4 | System | VerifyNTP | Verifies if NTP is synchronised. | - | PASS | - |
@@ -145,8 +157,8 @@
 | 98 | s1-spine1 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Ethernet8 - P2P_WANCORE_Ethernet2 = 'up' | PASS | - |
 | 99 | s1-spine1 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Loopback0 - ROUTER_ID = 'up' | PASS | - |
 | 100 | s1-spine1 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Port-Channel1 - MLAG_s1-spine2_Port-Channel1 = 'up' | PASS | - |
-| 101 | s1-spine1 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Port-Channel2 - L2_RACK1_Port-Channel2 = 'up' | PASS | - |
-| 102 | s1-spine1 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Port-Channel4 - L2_RACK2_Port-Channel2 = 'up' | PASS | - |
+| 101 | s1-spine1 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Port-Channel2 - L2_RACK1_Port-Channel2 = 'up' | FAIL | Port-Channel2 - Status mismatch - Expected: up/up, Actual: down/lowerLayerDown |
+| 102 | s1-spine1 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Port-Channel4 - L2_RACK2_Port-Channel2 = 'up' | FAIL | Port-Channel4 - Status mismatch - Expected: up/up, Actual: down/lowerLayerDown |
 | 103 | s1-spine1 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Vlan10 - Ten = 'up' | PASS | - |
 | 104 | s1-spine1 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Vlan20 - Twenty = 'up' | PASS | - |
 | 105 | s1-spine1 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Vlan4093 - MLAG_L3 = 'up' | PASS | - |
@@ -174,8 +186,8 @@
 | 127 | s1-spine2 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Ethernet8 - P2P_WANCORE_Ethernet2 = 'up' | PASS | - |
 | 128 | s1-spine2 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Loopback0 - ROUTER_ID = 'up' | PASS | - |
 | 129 | s1-spine2 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Port-Channel1 - MLAG_s1-spine1_Port-Channel1 = 'up' | PASS | - |
-| 130 | s1-spine2 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Port-Channel2 - L2_RACK1_Port-Channel2 = 'up' | PASS | - |
-| 131 | s1-spine2 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Port-Channel4 - L2_RACK2_Port-Channel2 = 'up' | PASS | - |
+| 130 | s1-spine2 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Port-Channel2 - L2_RACK1_Port-Channel2 = 'up' | FAIL | Port-Channel2 - Status mismatch - Expected: up/up, Actual: down/lowerLayerDown |
+| 131 | s1-spine2 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Port-Channel4 - L2_RACK2_Port-Channel2 = 'up' | FAIL | Port-Channel4 - Status mismatch - Expected: up/up, Actual: down/lowerLayerDown |
 | 132 | s1-spine2 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Vlan10 - Ten = 'up' | PASS | - |
 | 133 | s1-spine2 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Vlan20 - Twenty = 'up' | PASS | - |
 | 134 | s1-spine2 | Interfaces | VerifyInterfacesStatus | Verifies the operational states of specified interfaces to ensure they match expected configurations. | Interface Vlan4093 - MLAG_L3 = 'up' | PASS | - |

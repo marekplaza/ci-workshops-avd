@@ -157,7 +157,10 @@
       "interfaces"
     ],
     "description": "Verifies the operational states of specified interfaces to ensure they match expected configurations.",
-    "result": "success",
+    "result": "failure",
+    "messages": [
+      "Port-Channel2 - Not configured"
+    ],
     "custom_field": "Interface Port-Channel2 - L2_SPINES_Port-Channel4 = 'up'"
   },
   {
@@ -167,7 +170,10 @@
       "interfaces"
     ],
     "description": "Verifies the operational states of specified interfaces to ensure they match expected configurations.",
-    "result": "success",
+    "result": "failure",
+    "messages": [
+      "Port-Channel4 - Not configured"
+    ],
     "custom_field": "Interface Port-Channel4 - SERVER_s1-host2 = 'up'"
   },
   {
