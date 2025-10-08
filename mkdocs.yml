@@ -1,0 +1,10 @@
+---
+site_name: AVD docs
+
+theme:
+  name: material
+
+nav:
+  - Home:
+    - Site 1 Fabric Docs: site_1/fabric/SITE1_FABRIC-documentation.md
+    - Site 2 Fabric Docs: site_2/fabric/SITE2_FABRIC-documentation.md

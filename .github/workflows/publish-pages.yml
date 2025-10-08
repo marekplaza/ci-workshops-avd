@@ -1,0 +1,50 @@
+---
+name: publish AVD docs
+on:
+  push:
+    branches: [ 'main' ]
+    paths:
+    - labs/L2LS/sites/site_1/documentation/**
+    - labs/L2LS_EVPN/sites/site_2/documentation/**
+    - mkdocs.yml
+    - .github/workflows/publish-pages.yml
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+
+      - name: Checkout code ✅
+        uses: actions/checkout@v4
+
+      - name: move AVD docs ✂
+        run: |
+          mkdir -p docs/site_1
+          mkdir -p docs/site_2
+          cp -r labs/L2LS/sites/site_1/documentation/* docs/site_1
+          cp -r labs/L2LS/sites/site_2/documentation/* docs/site_2
+
+      - name: Setup Python3 🐍
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Build MkDocs Site
+        run: |
+          pip install mkdocs-material
+          mkdocs build
+
+      - name: Setup Pages 📖
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact 🔼
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./site/
+
+      - name: Deploy to GitHub Pages 🚀
+        id: deployment
+        uses: actions/deploy-pages@v4
