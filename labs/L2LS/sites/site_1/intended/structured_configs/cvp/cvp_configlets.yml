@@ -1,6 +1,6 @@
 cvp_configlets:
   AVD_s1-leaf1: "!\nno enable password\nno aaa root\n!\nusername arista privilege
-    15 role network-admin secret sha512 $6$arista$RArU/OEQzi81GpjRc8tQz6nDYbOoQGCq02vnj4AeNZrW6wSGSN6dyDw1/DzCDi5HvsTWHXFmASMPSy7iJED.T/\n!\ndaemon
+    15 role network-admin secret sha512 $6$arista$UxIC6BqFpEpuUrytxERYsFBs7mfhd6H5wvxdqTiMHdTzd0zqRCktPmnrKZVutgwjRmiw0gHTAFypvUGxQgBcc0\n!\ndaemon
     TerminAttr\n   exec /usr/bin/TerminAttr -cvaddr=192.168.0.5:9910 -cvauth=token,/tmp/token
     -smashexcludes=ale,flexCounter,hardware,kni,pulse,strata -ingestexclude=/Sysdb/cell/1/agent,/Sysdb/cell/2/agent
     -taillogs\n   no shutdown\n!\nvlan internal order ascending range 1006 1199\n!\ntransceiver
@@ -29,7 +29,7 @@ cvp_configlets:
     mlag 300\n   reload-delay non-mlag 330\n!\nip route 0.0.0.0/0 192.168.0.1\n!\nntp
     server 192.168.0.1 iburst local-interface Management0\n!\nend\n"
   AVD_s1-leaf2: "!\nno enable password\nno aaa root\n!\nusername arista privilege
-    15 role network-admin secret sha512 $6$arista$RArU/OEQzi81GpjRc8tQz6nDYbOoQGCq02vnj4AeNZrW6wSGSN6dyDw1/DzCDi5HvsTWHXFmASMPSy7iJED.T/\n!\ndaemon
+    15 role network-admin secret sha512 $6$arista$UxIC6BqFpEpuUrytxERYsFBs7mfhd6H5wvxdqTiMHdTzd0zqRCktPmnrKZVutgwjRmiw0gHTAFypvUGxQgBcc0\n!\ndaemon
     TerminAttr\n   exec /usr/bin/TerminAttr -cvaddr=192.168.0.5:9910 -cvauth=token,/tmp/token
     -smashexcludes=ale,flexCounter,hardware,kni,pulse,strata -ingestexclude=/Sysdb/cell/1/agent,/Sysdb/cell/2/agent
     -taillogs\n   no shutdown\n!\nvlan internal order ascending range 1006 1199\n!\ntransceiver
@@ -58,7 +58,7 @@ cvp_configlets:
     mlag 300\n   reload-delay non-mlag 330\n!\nip route 0.0.0.0/0 192.168.0.1\n!\nntp
     server 192.168.0.1 iburst local-interface Management0\n!\nend\n"
   AVD_s1-leaf3: "!\nno enable password\nno aaa root\n!\nusername arista privilege
-    15 role network-admin secret sha512 $6$arista$RArU/OEQzi81GpjRc8tQz6nDYbOoQGCq02vnj4AeNZrW6wSGSN6dyDw1/DzCDi5HvsTWHXFmASMPSy7iJED.T/\n!\ndaemon
+    15 role network-admin secret sha512 $6$arista$UxIC6BqFpEpuUrytxERYsFBs7mfhd6H5wvxdqTiMHdTzd0zqRCktPmnrKZVutgwjRmiw0gHTAFypvUGxQgBcc0\n!\ndaemon
     TerminAttr\n   exec /usr/bin/TerminAttr -cvaddr=192.168.0.5:9910 -cvauth=token,/tmp/token
     -smashexcludes=ale,flexCounter,hardware,kni,pulse,strata -ingestexclude=/Sysdb/cell/1/agent,/Sysdb/cell/2/agent
     -taillogs\n   no shutdown\n!\nvlan internal order ascending range 1006 1199\n!\ntransceiver
@@ -87,7 +87,7 @@ cvp_configlets:
     mlag 300\n   reload-delay non-mlag 330\n!\nip route 0.0.0.0/0 192.168.0.1\n!\nntp
     server 192.168.0.1 iburst local-interface Management0\n!\nend\n"
   AVD_s1-leaf4: "!\nno enable password\nno aaa root\n!\nusername arista privilege
-    15 role network-admin secret sha512 $6$arista$RArU/OEQzi81GpjRc8tQz6nDYbOoQGCq02vnj4AeNZrW6wSGSN6dyDw1/DzCDi5HvsTWHXFmASMPSy7iJED.T/\n!\ndaemon
+    15 role network-admin secret sha512 $6$arista$UxIC6BqFpEpuUrytxERYsFBs7mfhd6H5wvxdqTiMHdTzd0zqRCktPmnrKZVutgwjRmiw0gHTAFypvUGxQgBcc0\n!\ndaemon
     TerminAttr\n   exec /usr/bin/TerminAttr -cvaddr=192.168.0.5:9910 -cvauth=token,/tmp/token
     -smashexcludes=ale,flexCounter,hardware,kni,pulse,strata -ingestexclude=/Sysdb/cell/1/agent,/Sysdb/cell/2/agent
     -taillogs\n   no shutdown\n!\nvlan internal order ascending range 1006 1199\n!\ntransceiver
@@ -116,7 +116,7 @@ cvp_configlets:
     mlag 300\n   reload-delay non-mlag 330\n!\nip route 0.0.0.0/0 192.168.0.1\n!\nntp
     server 192.168.0.1 iburst local-interface Management0\n!\nend\n"
   AVD_s1-spine1: "!\nno enable password\nno aaa root\n!\nusername arista privilege
-    15 role network-admin secret sha512 $6$arista$RArU/OEQzi81GpjRc8tQz6nDYbOoQGCq02vnj4AeNZrW6wSGSN6dyDw1/DzCDi5HvsTWHXFmASMPSy7iJED.T/\n!\ndaemon
+    15 role network-admin secret sha512 $6$arista$UxIC6BqFpEpuUrytxERYsFBs7mfhd6H5wvxdqTiMHdTzd0zqRCktPmnrKZVutgwjRmiw0gHTAFypvUGxQgBcc0\n!\ndaemon
     TerminAttr\n   exec /usr/bin/TerminAttr -cvaddr=192.168.0.5:9910 -cvauth=token,/tmp/token
     -smashexcludes=ale,flexCounter,hardware,kni,pulse,strata -ingestexclude=/Sysdb/cell/1/agent,/Sysdb/cell/2/agent
     -taillogs\n   no shutdown\n!\nvlan internal order ascending range 1006 1199\n!\ntransceiver
@@ -162,7 +162,7 @@ cvp_configlets:
     Ethernet7\n   no passive-interface Ethernet8\n   no passive-interface Vlan4093\n
     \  redistribute connected\n   max-lsa 12000\n!\nend\n"
   AVD_s1-spine2: "!\nno enable password\nno aaa root\n!\nusername arista privilege
-    15 role network-admin secret sha512 $6$arista$RArU/OEQzi81GpjRc8tQz6nDYbOoQGCq02vnj4AeNZrW6wSGSN6dyDw1/DzCDi5HvsTWHXFmASMPSy7iJED.T/\n!\ndaemon
+    15 role network-admin secret sha512 $6$arista$UxIC6BqFpEpuUrytxERYsFBs7mfhd6H5wvxdqTiMHdTzd0zqRCktPmnrKZVutgwjRmiw0gHTAFypvUGxQgBcc0\n!\ndaemon
     TerminAttr\n   exec /usr/bin/TerminAttr -cvaddr=192.168.0.5:9910 -cvauth=token,/tmp/token
     -smashexcludes=ale,flexCounter,hardware,kni,pulse,strata -ingestexclude=/Sysdb/cell/1/agent,/Sysdb/cell/2/agent
     -taillogs\n   no shutdown\n!\nvlan internal order ascending range 1006 1199\n!\ntransceiver

@@ -58,7 +58,7 @@ local_users:
 - name: arista
   privilege: 15
   role: network-admin
-  sha512_password: $6$arista$RArU/OEQzi81GpjRc8tQz6nDYbOoQGCq02vnj4AeNZrW6wSGSN6dyDw1/DzCDi5HvsTWHXFmASMPSy7iJED.T/
+  sha512_password: $6$arista$UxIC6BqFpEpuUrytxERYsFBs7mfhd6H5wvxdqTiMHdTzd0zqRCktPmnrKZVutgwjRmiw0gHTAFypvUGxQgBcc0
 management_api_http:
   enable_https: true
   enable_vrfs:
