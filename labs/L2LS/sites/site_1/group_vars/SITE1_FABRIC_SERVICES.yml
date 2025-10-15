@@ -25,4 +25,15 @@ tenants:
               - node: s1-spine1
                 ip_address: 10.20.20.2/24
               - node: s1-spine2
-                ip_address: 10.20.20.33/24
+                ip_address: 10.20.20.3/24
+          - id: 50
+            name: 'Twenty'
+            tags: [ "ING" ]
+            enabled: true
+            ip_virtual_router_addresses:
+              - 10.50.50.1
+            nodes:
+              - node: s1-spine1
+                ip_address: 10.50.50.22/24
+              - node: s1-spine2
+                ip_address: 10.50.50.33/24
